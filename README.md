@@ -10,7 +10,7 @@ Projeto de um sistema CRUD realizado em 06/2023 como exercício para estudar a u
 - HTML 
 - CSS 
 - JS
-- Banco de Dados
+- Banco de Dados MySQL
 - Git e Github
 
 ## Contato 💙
