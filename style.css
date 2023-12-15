@@ -1,0 +1,240 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-image: url(midia/bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav{
+  height: 7rem;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #295982;
+}
+
+
+nav img{
+  width: 250px;
+  padding: 0 0 0 2rem;
+}
+
+nav ul{
+  display: flex;
+  list-style: none;
+  padding: 0 4rem 0 0;
+}
+
+nav ul li a{
+  color: #fff;
+  font-weight: 400;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  padding: 0 1rem 0 1rem;
+  text-decoration: none;
+  transition: .2s ease-out;
+}
+
+nav ul li a:hover{
+  color: #6FABD0;
+}
+
+.dropdown li .menu {
+  list-style-type: none;
+  padding: 0;
+  background-color: #295982;
+}
+
+.dropdown li .menu{
+  display: inline;
+  position: relative;
+}
+
+.dropdown li .menu a{
+  text-decoration: none;
+  padding: 10px 20px 10px 20px;
+  display: inline-block;
+}
+
+/* Escondendo o Submenu */
+
+.dropdown li .menu{
+  display: none;
+  position: absolute;
+}
+
+/* Exibindo o Submenu */
+.dropdown li:hover .menu{
+  display: block;
+}
+
+.menu{
+  width: 150px;
+}
+
+
+.usuario{
+  padding: 0 2rem 0 0;
+}
+
+.btn-login{
+  margin-right: 2rem;
+}
+
+.usuario a, .btn-login-modal, .btn-login{
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #6FABD0;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  border-color: transparent;
+  border-radius: 12px;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.usuario a:hover, .btn-login-modal:hover, .btn-login:hover{
+  cursor: pointer;
+  background-color: #5988a5;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: calc(100vh - 10rem);
+  width: 1400px;
+  margin: 0 auto;
+}
+
+.titulo-principal{
+  /* border: 2px solid red; */
+  padding: 0 0 0 5rem;
+  width: 50rem;
+}
+
+.titulo-principal h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 65px;
+}
+
+.titulo-principal p{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  padding: 1rem 0 2rem 10px;
+}
+
+.titulo-principal button{
+  padding: 10px 20px;
+  border-color: transparent;
+  border-radius: 12px;
+  background-color: #6FABD0;
+  color: #fff;
+  font-family: 'Montserrat' sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 15px;
+  margin: 0 0 0 10px;
+  transition: .2s ease-out;
+}
+
+.titulo-principal button:hover{
+  cursor: pointer;
+  background-color: #295982;
+}
+
+.img-lateral img{
+  padding: 0 5rem 0 0;
+}
+
+
+ /* Modal  */
+
+.popup{
+  position: absolute;
+  top: -150%;
+  left: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(1.25);
+  width: 380px;
+  background-color: #295982;
+  padding: 20px 30px;
+  box-shadow: 2px 2px 5px 5px rgba(0,0,0,0.15);
+  border-radius: 10px;
+  transition: top 0ms ease-in-out 200ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 200ms ease-in-out 0ms;
+}
+
+.popup.active{
+  position: absolute;
+  top: 50%;
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+  transition: top 0ms ease-in-out 0ms,
+              opacity 200ms ease-in-out 0ms,
+              transform 200ms ease-in-out 0ms;
+}
+
+.popup .btn-fechar{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 15px;
+  height: 15px;
+  color: #fff;
+  text-align: center;
+  line-height: 15px;
+  border-radius: 15px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.popup .form h2{
+  text-align: center;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 0 20px;
+  font-size: 25px;
+}
+
+.popup .form .form-element{
+  margin: 15px 0;
+}
+
+.popup .form .form-element label{
+  font-size: 14px;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.popup .form .form-element input[type="text"],
+.popup .form .form-element input[type="password"]{
+  margin-top: 5px;
+  display: block;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+.popup .form .form-element button .btn-login-modal{
+  width: 100%;
+  margin: 12px 0;
+  cursor: pointer;
+}
+
